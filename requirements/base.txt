@@ -6,7 +6,7 @@ whitenoise==6.6.0
 
 # Database adapters
 psycopg[binary]==3.1.18
-mysqlclient==2.2.1
+# mysqlclient==2.2.1
 
 # Django REST Framework
 djangorestframework==3.14.0
