@@ -22,6 +22,7 @@
       "dest": "adminova/wsgi.py"
     }
   ],
+  "buildCommand": "./vercel-build.sh",
   "env": {
     "DJANGO_SETTINGS_MODULE": "adminova.settings.production",
     "PYTHONPATH": "/"
