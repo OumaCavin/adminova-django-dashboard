@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Vercel build script for Django Adminova Dashboard
 # This script runs Django migrations and collects static files
