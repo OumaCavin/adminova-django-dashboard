@@ -1,5 +1,6 @@
 """
 Production settings for Adminova
+Note: This file has been verified for Vercel deployment
 """
 from .base import *
 
