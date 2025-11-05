@@ -6,8 +6,6 @@
       "use": "@vercel/python"
     }
   ],
-  "buildCommand": "./vercel-build.sh",
-  "outputDirectory": "build",
   "functions": {
     "adminova/wsgi.py": {
       "runtime": "python3.12"
@@ -16,7 +14,18 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "staticfiles/$1"
+      "dest": "/static/$1",
+      "headers": {
+        "Cache-Control": "s-maxage=31536000,immutable"
+      }
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "/media/$1"
+    },
+    {
+      "src": "/api/mpesa-callback",
+      "dest": "adminova/wsgi.py"
     },
     {
       "src": "/(.*)",
