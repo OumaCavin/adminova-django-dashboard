@@ -6,7 +6,8 @@
       "use": "@vercel/python"
     }
   ],
-  "outputDirectory": ".vercel/output",
+  "buildCommand": "./vercel-build.sh",
+  "outputDirectory": "build",
   "functions": {
     "adminova/wsgi.py": {
       "runtime": "python3.12"
@@ -15,16 +16,11 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/static/$1"
+      "dest": "staticfiles/$1"
     },
     {
       "src": "/(.*)",
       "dest": "adminova/wsgi.py"
     }
-  ],
-  "buildCommand": "./vercel-build.sh",
-  "env": {
-    "DJANGO_SETTINGS_MODULE": "adminova.settings.production",
-    "PYTHONPATH": "/"
-  }
+  ]
 }
