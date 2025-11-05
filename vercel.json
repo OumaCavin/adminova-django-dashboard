@@ -6,7 +6,6 @@
       "use": "@vercel/python"
     }
   ],
-  "buildCommand": "./vercel-build.sh",
   "outputDirectory": ".vercel/output",
   "functions": {
     "adminova/wsgi.py": {
