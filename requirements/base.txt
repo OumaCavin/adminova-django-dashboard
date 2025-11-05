@@ -1,0 +1,22 @@
+# Django Core
+Django==5.0.1
+python-decouple==3.8
+gunicorn==21.2.0
+whitenoise==6.6.0
+
+# Database adapters
+psycopg[binary]==3.1.18
+mysqlclient==2.2.1
+
+# Django REST Framework
+djangorestframework==3.14.0
+drf-spectacular==0.27.1
+django-cors-headers==4.3.1
+
+# Payment utilities
+requests==2.31.0
+
+# Utilities
+Pillow==10.2.0
+python-dateutil==2.8.2
+pytz==2024.1
