@@ -6,9 +6,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import HttpResponse
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 
+def test_view(request):
+    """Simple test view to verify Django is working"""
+    return HttpResponse("✅ Django is working on Vercel! Application deployed successfully.")
+
 urlpatterns = [
+    # Test endpoint
+    path('test/', test_view, name='test'),
+    
     # Admin
     path('admin/', admin.site.urls),
     
