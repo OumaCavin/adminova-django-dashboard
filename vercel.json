@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "adminova/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "buildCommand": "./vercel-build.sh",
+  "outputDirectory": ".vercel/output",
+  "functions": {
+    "adminova/wsgi.py": {
+      "runtime": "python3.12"
+    }
+  },
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "adminova/wsgi.py"
+    }
+  ],
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "adminova.settings.production",
+    "PYTHONPATH": "/"
+  }
+}
