@@ -6,8 +6,6 @@
       "use": "@vercel/python"
     }
   ],
-  "buildCommand": "./vercel-build.sh",
-  "outputDirectory": "build",
   "functions": {
     "adminova/wsgi.py": {
       "runtime": "python3.12"
@@ -16,7 +14,7 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "staticfiles/$1"
+      "dest": "static/$1"
     },
     {
       "src": "/(.*)",
