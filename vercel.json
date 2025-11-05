@@ -31,5 +31,9 @@
       "src": "/(.*)",
       "dest": "adminova/wsgi.py"
     }
-  ]
+  ],
+  "env": {
+    "PYTHONPATH": "/",
+    "DJANGO_SETTINGS_MODULE": "adminova.settings.production"
+  }
 }
